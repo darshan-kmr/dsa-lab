@@ -1,8 +1,13 @@
-#include<stdio.h>#include<stdlib.h>#define MAX 3 //you can change this size according to your requirementint s[MAX];
-int top = -1;void push(int item);
+#include<stdio.h>
+#include<stdlib.h>
+#define MAX 3 
+int s[MAX];
+int top = -1;
+void push(int item);
 int pop();
 void palindrome();
-void display();void main() {
+void display();
+void main() {
 int choice, item;
 while (1) {
 printf("\n\n\n\n~~~~~~Menu~~~~~~ : ");
@@ -65,7 +70,8 @@ printf("| %d |\n", s[i]);
 int flag = 1, i;
 printf("\nStack content are:\n");
 for (i = top; i >= 0; i--)
-printf("| %d |\n", s[i]);printf("\nReverse of stack content are:\n");
+printf("| %d |\n", s[i]);
+printf("\nReverse of stack content are:\n");
 for (i = 0; i <= top; i++)
 printf("| %d |\n", s[i]);for (i = 0; i <= top / 2; i++) {
 if (s[i] != s[top - i]) {
